@@ -110,15 +110,14 @@ def scrap_phys_org():
 
 
 # nytimes.com
-def scrap_nytimes_com():
+def scrap_nytimes_com(pages=5):
     with Session() as s:
         url = 'https://www.nytimes.com/search?query=tesla'
         driver = webdriver.Chrome(executable_path='/home/ilolio/Documents/chromedriver')
         driver.get(url)
-        for i in range(50):
+        for i in range(pages):
             driver.find_element_by_css_selector('button[data-testid=search-show-more-button]').click()
-            time.sleep(2)
-            print(i, '- done')
+            time.sleep(4)
 
         soup = BeautifulSoup(driver.page_source, 'lxml')
 
@@ -156,8 +155,8 @@ def scrap_nytimes_com():
     return data
 
 
-data = scrap_nytimes_com()
+data = scrap_nytimes_com(250)
 
 # Saving scraped data
-with open('../../data/data_nytimes.pickle', 'wb') as f:
+with open('../../data/raw/data_nytimes.pickle', 'wb') as f:
     pickle.dump(data, f)

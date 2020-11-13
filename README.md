@@ -11,7 +11,7 @@ movement.
 * Data Manipulation - Pandas
 * Preprocessing - NLP, NLTK, Pandas
 * Sentiment Analysis - NLTK, Numpy, scipy
-* Stock Forecasting - Tensorflow, Keras, sklearn
+* Stock Forecasting - Keras, sklearn
 * Visualization - Matplotlib
 
 ## Result

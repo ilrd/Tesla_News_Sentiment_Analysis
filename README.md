@@ -1,6 +1,6 @@
 # Tesla News Sentiment Analysis 
 
-<img align="right" vspace="5" hspace="5" src="./img/logo.png" width="450">
+<img align="right" vspace="5" hspace="5" src="./img/logo.png" width="430">
 Sentiment analysis performed on news about Tesla scraped from nytimes.com and other websites
 in order to find a correlation between the media sentiment about Tesla and its stock price
 movement.
